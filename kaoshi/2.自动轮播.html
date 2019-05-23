@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 400px;
+				height: 303px;
+				border: 1px solid red;
+				margin: 0 auto;
+				position: relative;
+			}
+			img{
+				position: absolute;
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var oBox=document.getElementById("box");
+				var aImg=document.getElementsByTagName("img");
+				var loop=0;
+				setInterval(function(){
+					loop++;
+					loop%=3;
+					for(var i=0;i<3;i++){
+						
+					
+						aImg[i].style.display="block";
+					}
+					
+					
+					aImg[loop].style.display="black";
+
+				},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/1.jpg" />
+			<img src="img/2.jpg" />
+			<img src="img/3.jpg" />
+		</div>
+	</body>
+</html>
